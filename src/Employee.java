@@ -4,13 +4,13 @@ public class Employee {
     private final int id ;
     private int departments;
     private String fullName;
-    private int salary ;
+    private double salary ;
     private static int counter=0;
 
 
 
 
-    public Employee(String fullName,int salary,int departments){
+    public Employee(String fullName,double salary,int departments){
         this.fullName=fullName;
         this.salary=salary;
         this.departments=departments;
@@ -29,14 +29,15 @@ public class Employee {
     public String getFullName() {
         return fullName;
     }
-    public int getSalary(){
-    return salary;
+    public double getSalary(){
+
+        return salary;
     }
 
     public void setdepartments(int departments) {
         this.departments = departments;
     }
-    public void setSalary(int salary){
+    public void setSalary(double salary){
         this.salary=salary;
     }
 
@@ -47,9 +48,15 @@ public class Employee {
                 " Ф.И.О. " + fullName + '\'' +
                 " зарплата " + salary ;
     }
-
-
+    public String toStringWithOutDepartment(){
+        return "Работник " + id +
+                " Ф.И.О. " + fullName + '\'' +
+                " зарплата " + salary ;
     }
+    }
+
+
+
 
 
 
